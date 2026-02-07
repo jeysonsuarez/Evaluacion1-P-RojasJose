@@ -5,8 +5,13 @@ Integrantes: Jose Rojas / C.I 30864204
 Trayecto 2 / seccion 1
 PNF: Informatica
 
-1. Sistema de Biblioteca: Crear entidad Libro (ID, Título:string, 
-Páginas:integer, Disponible:boolean, Publicado:date).
+Enunciado 1: Sistema de Biblioteca
 
 
-Para el desarrollo de este sistema, se ha implementado la entidad Libro, la cual gestiona los campos de ID, Título (string), Páginas (integer), Disponible (boolean) y Publicado (date). Es importante destacar que, previo a la ejecución, se debe asegurar que el archivo .env de prueba cuente con la configuración correcta de la base de datos (host, puerto, nombre de BD y credenciales). Una vez verificada la conexión, se procede con la preparación del entorno mediante los comandos php artisan migrate para la creación de tablas, php artisan migrate:fresh --seed para el truncado y carga de datos iniciales, y finalmente php artisan serve para iniciar el servidor de desarrollo.
+1. Configurar el entorno: el archivo .env.example cambiale el nombre a .env y asegurate que dentro diga DB_CONNECTION=sqlite
+
+2. Crear la estructura: Ejecuta el comando php artisan migrate para generar las tablas en la base de datos (incluyendo la entidad Libro).
+
+3. Limpiar y poblar datos: Utiliza php artisan migrate:fresh --seed para truncar las tablas existentes y cargar los datos iniciales de prueba.
+
+4. Iniciar el sistema: Ejecuta php artisan serve para levantar el servidor de desarrollo local.
